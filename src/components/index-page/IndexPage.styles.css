@@ -1,0 +1,12 @@
+.colored-on-hover {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.colored-on-hover:hover {
+  filter: grayscale(0%);
+}
+
+.highlight span {
+  color: #2B84CF;
+}

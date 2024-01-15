@@ -1,0 +1,35 @@
+{
+  "name": "chauffe-tec",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev:inspect": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
+    "format": "exec prettier . --write"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.4.2",
+    "negotiator": "^0.6.3",
+    "next": "13.5.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "react-typed": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/negotiator": "^0.6.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.6",
+    "postcss": "^8",
+    "prettier": "3.1.1",
+    "tailwindcss": "^3",
+    "typescript": "^5"
+  }
+}
