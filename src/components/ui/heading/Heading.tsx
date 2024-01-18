@@ -1,8 +1,12 @@
+import { CSSProperties } from "react"
+
 type HeadingProps = {
+  center?: boolean
   children: React.ReactNode
-  level?: 1 | 2 | 3
   className?: string
-  withUnderline?: boolean
+  level?: 1 | 2 | 3
+  style?: CSSProperties
+  underline?: boolean
 }
 
 const font: Record<NonNullable<HeadingProps['level']>, string> = {
@@ -27,26 +31,33 @@ const barWidth: Record<NonNullable<HeadingProps['level']>, string> = {
 }
 
 export const Heading = ({
+  center = false,
   children,
   className,
   level = 1,
-  withUnderline = false,
+  style,
+  underline = false,
 }: HeadingProps) => {
   const Markup = `h${level}` as const
 
   return (
     <Markup
-      className={`${font[level]} ${withUnderline ? mb[level] : ''} font-bold text relative whitespace-pre-line ${className}`}
+      className={`${font[level]
+        } ${underline ? mb[level] : ''
+        } ${center ? 'text-center' : 'text-left'
+        } font-bold text relative whitespace-pre-line ${className}`}
+      style={style}
     >
       {children}
-      {withUnderline && <span
+      {underline && <span
         style={{
           position: 'absolute',
           width: barWidth[level],
           height: '3px',
           backgroundColor: '#2B84CF',
           top: barSpace[level],
-          left: '0',
+          left: center ? '50%' : '0',
+          transform: center ? 'translateX(-50%)' : ''
         }}
       />}
     </Markup>

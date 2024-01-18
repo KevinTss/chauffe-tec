@@ -39,31 +39,31 @@ export const ServicesPage = () => {
       </section>
 
       <section className="flex justify-center flex-grow w-full">
-        <div className="grid grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
           <div className="flex flex-col items-start gap-8">
-            <Heading className="text-slate-800 highlight" level={2} withUnderline>
+            <Heading className="text-slate-800 highlight" level={2} underline>
               {t('services.1.title')}
             </Heading>
-            <Paragraph className="text-slate-700 max-w-md">
+            <Paragraph className="text-slate-700 max-w-full lg:max-w-md">
               {t('services.1.description')}
             </Paragraph>
           </div>
-          <div className="flex">
-            <Image src={service1ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} />
+          <div className="flex pt-10 lg:pt-0">
+            <Image src={service1ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} layout='responsive' />
           </div>
         </div>
       </section>
 
       <section className="flex justify-center flex-grow w-full">
-        <div className="grid grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
-          <div className="flex">
-            <Image src={service2ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} />
+        <div className="flex flex-col lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
+          <div className="flex order-2 lg:order-1 pt-10 lg:pt-0">
+            <Image src={service2ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} layout='responsive' />
           </div>
-          <div className="flex flex-col items-start gap-8 pl-10">
-            <Heading className="text-slate-800 highlight" level={2} withUnderline>
+          <div className="flex flex-col items-start gap-8 lg:pl-10 order-1 lg:order-2">
+            <Heading className="text-slate-800 highlight" level={2} underline>
               {t('services.2.title')}
             </Heading>
-            <Paragraph className="text-slate-700">
+            <Paragraph className="text-slate-700 max-w-full lg:max-w-md">
               {t('services.2.description')}
             </Paragraph>
           </div>
@@ -71,24 +71,24 @@ export const ServicesPage = () => {
       </section>
 
       <section className="flex justify-center flex-grow w-full">
-        <div className="grid grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
           <div className="flex flex-col items-start gap-8">
-            <Heading className="text-slate-800 highlight" level={2} withUnderline>
+            <Heading className="text-slate-800 highlight" level={2} underline>
               {t('services.3.title')}
             </Heading>
-            <Paragraph className="text-slate-700 max-w-md">
+            <Paragraph className="text-slate-700 max-w-full lg:max-w-md">
               {t('services.3.description')}
             </Paragraph>
           </div>
-          <div className="flex">
-            <Image src={service3ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} />
+          <div className="flex pt-10 lg:pt-0">
+            <Image src={service3ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} layout='responsive' />
           </div>
         </div>
       </section>
 
       <section className="flex justify-center flex-grow w-full">
-        <div className="grid grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
-          <div className="flex">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24">
+          <div className="flex order-2 lg:order-1 pt-10 lg:pt-0">
             <Image
               src={service4ImgUrl}
               alt="Plumber"
@@ -100,13 +100,14 @@ export const ServicesPage = () => {
                 maxWidth: '550px',
                 objectPosition: '50% 60%'
               }}
+              layout='responsive'
             />
           </div>
-          <div className="flex flex-col items-start gap-8 pl-10">
-            <Heading className="text-slate-800 highlight" level={2} withUnderline>
+          <div className="flex flex-col items-start gap-8 lg:pl-10 order-1 lg:order-2">
+            <Heading className="text-slate-800 highlight" level={2} underline>
               {t('services.4.title')}
             </Heading>
-            <Paragraph className="text-slate-700 max-w-md">
+            <Paragraph className="text-slate-700 max-w-full lg:max-w-md">
               {t('services.4.description')}
             </Paragraph>
           </div>
@@ -114,17 +115,17 @@ export const ServicesPage = () => {
       </section>
 
       <section className="flex justify-center flex-grow w-full">
-        <div className="grid grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24 pb-24">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24 pb-24">
           <div className="flex flex-col items-start gap-8">
-            <Heading className="text-slate-800 highlight" level={2} withUnderline>
+            <Heading className="text-slate-800 highlight" level={2} underline>
               {t('services.5.title')}
             </Heading>
-            <Paragraph className="text-slate-700 max-w-md">
+            <Paragraph className="text-slate-700 max-w-full lg:max-w-md">
               {t('services.5.description')}
             </Paragraph>
           </div>
-          <div className="flex">
-            <Image src={service5ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} />
+          <div className="flex pt-10 lg:pt-0">
+            <Image src={service5ImgUrl} alt="Plumber" width={550} height={350} className='object-cover' style={{ maxHeight: '350px', maxWidth: '550px' }} layout='responsive' />
           </div>
         </div>
       </section>

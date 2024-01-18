@@ -11,10 +11,10 @@ export const LocaleSwitcher = () => {
   const locale = useCurrentLocale()
 
   return (
-    <div className="flex justify-center">
+    <div className="flex lg:justify-center">
       <div className="relative">
         <button
-          className="text-base text-white hover:bg-blue-300 px-6 py-2 rounded-xl cursor-pointer capitalize"
+          className="text-base lg:text-white hover:bg-blue-300 px-6 py-2 rounded-xl cursor-pointer capitalize"
           onClick={() => setIsOpen(!isOpen)}
         >
           {locale}

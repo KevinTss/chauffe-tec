@@ -17,7 +17,7 @@ export const Navigation = () => {
   const t = useTranslate()
 
   return (
-    <div className="flex gap-2">
+    <div className="hidden lg:flex gap-2">
       {navigationLinks.map(({ trKey, path }) => (
         <Link
           key={trKey}
