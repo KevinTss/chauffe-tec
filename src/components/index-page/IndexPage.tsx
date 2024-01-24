@@ -10,7 +10,7 @@ import testimonial1ImgUrl from '@assets/testimonial-1.jpg'
 import testimonial2ImgUrl from '@assets/testimonial-2.jpg'
 import testimonial3ImgUrl from '@assets/testimonial-3.jpg'
 import { Locale } from '@types';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import './IndexPage.styles.css'
@@ -45,7 +45,7 @@ export const IndexPage = () => {
             className="hidden lg:flex"
             initial={{ opacity: 0, translateX: '100%' }}
             animate={{ opacity: 1, translateX: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8, ease: 'easeIn' }}
           >
             <Image src={plumber1ImgUrl} alt="Plumber" />
           </motion.div>
@@ -107,7 +107,6 @@ const SectionServices = () => {
   const { ref: refLi3, inView: isLi3InView } = useInView();
   const { ref: refLi4, inView: isLi4InView } = useInView();
   const { ref: refLi5, inView: isLi5InView } = useInView();
-  // console.log('inView', isLi1InView)
   return (
     <section className="flex justify-center flex-grow w-full bg-slate-50">
       <div className="flex flex-col lg:grid lg:grid-cols-2 flex-grow py-16 px-8 max-w-screen-xl gap-10">
