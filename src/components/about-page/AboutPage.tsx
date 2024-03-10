@@ -62,9 +62,9 @@ export const AboutPage = () => {
                 backgroundColor: '#2B84CF10',
               }}
             >
-              {/* @ts-ignore */}
               <Icon
                 name="map-pin"
+                // @ts-ignore
                 style={{ color: '#2B84CF', width: '28px', height: '28px' }}
               />
               <div className="flex flex-col gap-2">
@@ -83,9 +83,9 @@ export const AboutPage = () => {
                 backgroundColor: '#2B84CF10',
               }}
             >
-              {/* @ts-ignore */}
               <Icon
                 name="phone"
+                // @ts-ignore
                 style={{ color: '#2B84CF', width: '28px', height: '28px' }}
               />
               <div className="flex flex-col gap-2">
@@ -104,9 +104,9 @@ export const AboutPage = () => {
                 backgroundColor: '#2B84CF10',
               }}
             >
-              {/* @ts-ignore */}
               <Icon
                 name="letter"
+                // @ts-ignore
                 style={{ color: '#2B84CF', width: '28px', height: '28px' }}
               />
               <div className="flex flex-col gap-2">
