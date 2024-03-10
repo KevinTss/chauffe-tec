@@ -27,7 +27,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={font.className}>{children}</body>
+      <body className={`${font.className} `}>{children}</body>
     </html>
   )
 }

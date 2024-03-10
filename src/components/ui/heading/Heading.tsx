@@ -1,4 +1,4 @@
-import { CSSProperties } from "react"
+import { CSSProperties } from 'react'
 
 type HeadingProps = {
   center?: boolean
@@ -42,24 +42,25 @@ export const Heading = ({
 
   return (
     <Markup
-      className={`${font[level]
-        } ${underline ? mb[level] : ''
-        } ${center ? 'text-center' : 'text-left'
-        } font-bold text relative whitespace-pre-line ${className}`}
+      className={`${font[level]} ${underline ? mb[level] : ''} ${
+        center ? 'text-center' : 'text-left'
+      } font-bold text relative whitespace-pre-line ${className}`}
       style={style}
     >
       {children}
-      {underline && <span
-        style={{
-          position: 'absolute',
-          width: barWidth[level],
-          height: '3px',
-          backgroundColor: '#2B84CF',
-          top: barSpace[level],
-          left: center ? '50%' : '0',
-          transform: center ? 'translateX(-50%)' : ''
-        }}
-      />}
+      {underline && (
+        <span
+          style={{
+            position: 'absolute',
+            width: barWidth[level],
+            height: '3px',
+            backgroundColor: '#2B84CF',
+            top: barSpace[level],
+            left: center ? '50%' : '0',
+            transform: center ? 'translateX(-50%)' : '',
+          }}
+        />
+      )}
     </Markup>
   )
 }

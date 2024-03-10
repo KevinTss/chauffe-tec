@@ -1,14 +1,14 @@
 import Image, { StaticImageData } from 'next/image'
 import { useTranslate } from '@hooks'
-import { Heading, Paragraph, Underline } from '@components'
+import { Heading, Paragraph, Underline, CallNowButton } from '@components'
 import service1ImgUrl from '@assets/service-1.jpg'
 import service2ImgUrl from '@assets/service-2.jpg'
 import service3ImgUrl from '@assets/service-3.jpg'
 import service4ImgUrl from '@assets/service-4.jpg'
 import service5ImgUrl from '@assets/service-5.jpg'
 import bathroomImgUrl from '@assets/bathroom.jpg'
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import { CSSProperties } from 'react'
 
 export const ServicesPage = () => {
@@ -19,7 +19,7 @@ export const ServicesPage = () => {
       <section
         className="flex justify-center flex-grow w-full bg-center bg-cover relative"
         style={{
-          backgroundImage: `url(${bathroomImgUrl.src})`
+          backgroundImage: `url(${bathroomImgUrl.src})`,
         }}
       >
         <div
@@ -64,6 +64,7 @@ export const ServicesPage = () => {
         description={t('services.3.description')}
         url={service3ImgUrl}
       />
+
       <Section
         title={t('services.4.title')}
         description={t('services.4.description')}
@@ -78,6 +79,8 @@ export const ServicesPage = () => {
         url={service5ImgUrl}
         last
       />
+
+      <CallNowButton />
     </>
   )
 }
@@ -91,30 +94,35 @@ type SectionProps = {
   extraImageCss?: CSSProperties
 }
 
-const Section = ({ title, description, url, last, reverse, extraImageCss }: SectionProps) => {
-  const { ref: refText, inView: isTextInView } = useInView();
-  const { ref: refImage, inView: isImageInView } = useInView();
+const Section = ({
+  title,
+  description,
+  url,
+  last,
+  reverse,
+  extraImageCss,
+}: SectionProps) => {
+  const { ref: refText, inView: isTextInView } = useInView()
+  const { ref: refImage, inView: isImageInView } = useInView()
   return (
-    <section className="flex justify-center flex-grow w-full">
-      <div className={`flex flex-col lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24 ${last && 'pb-24'}`}>
+    <section className="flex justify-center flex-grow w-screen">
+      <div
+        className={`flex flex-col lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24 overflow-hidden ${
+          last && 'pb-24'
+        }`}
+      >
         <motion.div
           ref={refText}
-          className={`flex flex-col items-start gap-8 order-${reverse ? 1 : 1} lg:order-${reverse ? 2 : 1} ${reverse && 'lg:pl-10'}`}
+          className={`flex flex-col items-start gap-8 order-${
+            reverse ? 1 : 1
+          } lg:order-${reverse ? 2 : 1} ${reverse && 'lg:pl-10'}`}
           initial={{
             opacity: 0,
-            translateY: reverse
-              ? '-20px'
-              : '20px'
+            translateY: reverse ? '-20px' : '20px',
           }}
           animate={{
-            opacity: isTextInView
-              ? 1
-              : 0,
-            translateY: isTextInView
-              ? 0
-              : reverse
-                ? '-20px'
-                : '20px'
+            opacity: isTextInView ? 1 : 0,
+            translateY: isTextInView ? 0 : reverse ? '-20px' : '20px',
           }}
           transition={{ duration: 0.8 }}
         >
@@ -127,9 +135,14 @@ const Section = ({ title, description, url, last, reverse, extraImageCss }: Sect
         </motion.div>
         <motion.div
           ref={refImage}
-          className={`flex pt-10 lg:pt-0 order-${reverse ? 2 : 2} lg:order-${reverse ? 1 : 2}`}
+          className={`flex pt-10 lg:pt-0 order-${reverse ? 2 : 2} lg:order-${
+            reverse ? 1 : 2
+          }`}
           initial={{ opacity: 0, translateX: '40px' }}
-          animate={{ opacity: isImageInView ? 1 : 0, translateX: isImageInView ? 0 : '40px' }}
+          animate={{
+            opacity: isImageInView ? 1 : 0,
+            translateX: isImageInView ? 0 : '40px',
+          }}
           transition={{ duration: 1 }}
         >
           <Image
@@ -137,13 +150,13 @@ const Section = ({ title, description, url, last, reverse, extraImageCss }: Sect
             alt="Plumber"
             width={550}
             height={350}
-            className='object-cover'
+            className="object-cover"
             style={{
               maxHeight: '350px',
               maxWidth: '550px',
-              ...extraImageCss
+              ...extraImageCss,
             }}
-            layout='responsive'
+            layout="responsive"
           />
         </motion.div>
       </div>

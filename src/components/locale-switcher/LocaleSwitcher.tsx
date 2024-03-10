@@ -27,20 +27,24 @@ export const LocaleSwitcher = () => {
               onClick={() => setIsOpen(false)}
             />
 
-            <div
-              className="absolute right-0 mt-2 py-2 bg-white rounded-md shadow-xl z-20"
-            >
-              {i18n.locales.filter(l => l !== locale).map(l => {
-                if (!pageId) return null
-                const href = pathnames[pageId][l]
-                return (
-                  <li key={l} className="block ">
-                    <Link href={href} locale={l} className="w-full bg-slate-300 px-4 py-2 text-sm capitalize text-gray-800 hover:bg-slate-200 hover:text-gray-700">
-                      {l}
-                    </Link>
-                  </li>
-                )
-              })}
+            <div className="absolute right-0 mt-2 py-2 bg-white rounded-md shadow-xl z-20">
+              {i18n.locales
+                .filter(l => l !== locale)
+                .map(l => {
+                  if (!pageId) return null
+                  const href = pathnames[pageId][l]
+                  return (
+                    <li key={l} className="block ">
+                      <Link
+                        href={href}
+                        locale={l}
+                        className="w-full bg-slate-300 px-4 py-2 text-sm capitalize text-gray-800 hover:bg-slate-200 hover:text-gray-700"
+                      >
+                        {l}
+                      </Link>
+                    </li>
+                  )
+                })}
             </div>
           </>
         )}

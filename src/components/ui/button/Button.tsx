@@ -12,7 +12,7 @@ export const Button = ({ children, style = {}, ...props }: ButtonProps) => {
       className="text-md px-6 py-3 cursor-pointer rounded-lg text-white font-bold"
       style={{
         backgroundColor: 'var(--color-primary)',
-        ...style
+        ...style,
       }}
       {...props}
     >

@@ -6,7 +6,7 @@ import { DictionaryKeys } from '@types'
 import { useCurrentLocale, useTranslate } from '@hooks'
 import { LocaleSwitcher, Icon } from '@components'
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
 
 const navigationLinks = [
   { trKey: 'nav.index', path: pathnames['index'] },
@@ -20,8 +20,11 @@ export const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <button className='block lg:hidden pointer text-white' onClick={() => setIsOpen(true)}>
-        <Icon name='menu' />
+      <button
+        className="block lg:hidden pointer text-white"
+        onClick={() => setIsOpen(true)}
+      >
+        <Icon name="menu" />
       </button>
       <AnimatePresence>
         {isOpen && (
@@ -39,7 +42,7 @@ export const MobileNavigation = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   {/* @ts-ignore */}
-                  <Icon name='x' style={{ width: '24px', height: '24px' }} />
+                  <Icon name="x" style={{ width: '24px', height: '24px' }} />
                 </button>
                 {navigationLinks.map(({ trKey, path }) => (
                   <Link

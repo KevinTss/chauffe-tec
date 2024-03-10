@@ -1,4 +1,3 @@
-
 'use client'
 import Link from 'next/link'
 import { pathnames } from '@constants'
@@ -14,13 +13,23 @@ export const AppFooterContent = () => {
 
   return (
     <div className="flex flex-col lg:flex-row w-full max-w-screen-xl text-white gap-6">
-      <div className='flex flex-col justify-start grow w-full lg:w-1/2'>
+      <div className="flex flex-col justify-start grow w-full lg:w-1/2">
         {/* <Heading level={3} className='pb-4'>{t('footer.title.1')}</Heading> */}
-        <Image className='mb-4' src={logoFullUrl} alt='chaufftec logo' width={60} height={60} />
-        <Paragraph small className='pr-10'>{t('footer.title.1.description')}</Paragraph>
+        <Image
+          className="mb-4"
+          src={logoFullUrl}
+          alt="chaufftec logo"
+          width={60}
+          height={60}
+        />
+        <Paragraph small className="pr-10">
+          {t('footer.title.1.description')}
+        </Paragraph>
       </div>
-      <div className='w-full lg:w-1/4'>
-        <Heading level={3} className='pb-4'>{t('footer.title.2')}</Heading>
+      <div className="w-full lg:w-1/4">
+        <Heading level={3} className="pb-4">
+          {t('footer.title.2')}
+        </Heading>
         <ul className="">
           <li>
             <Link href={pathnames['index'][locale]}>
@@ -28,7 +37,9 @@ export const AppFooterContent = () => {
             </Link>
           </li>
           <li>
-            <Link href={`${pathnames['index'][locale]}#${SECTION_ID.testimonial}`}>
+            <Link
+              href={`${pathnames['index'][locale]}#${SECTION_ID.testimonial}`}
+            >
               {t('footer.title.2.link.2')}
             </Link>
           </li>
@@ -44,8 +55,10 @@ export const AppFooterContent = () => {
           </li>
         </ul>
       </div>
-      <div className='w-full lg:w-1/4'>
-        <Heading level={3} className='pb-4'>{t('footer.title.3')}</Heading>
+      <div className="w-full lg:w-1/4">
+        <Heading level={3} className="pb-4">
+          {t('footer.title.3')}
+        </Heading>
         <ul className="flex flex-col gap-2">
           <li>
             <Paragraph small>{t('footer.title.3.link.1')}</Paragraph>
@@ -58,4 +71,3 @@ export const AppFooterContent = () => {
     </div>
   )
 }
-

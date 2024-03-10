@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { useTranslate } from '@hooks'
-import { Heading, Paragraph, Icon, Underline } from '@components'
+import { Heading, Paragraph, Icon, Underline, CallNowButton } from '@components'
 import cityImgUrl from '@assets/city.jpg'
 import logoFullUrl from '@assets/logo-full.svg'
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 import './AboutPage.styles.css'
 
@@ -15,7 +15,7 @@ export const AboutPage = () => {
       <section
         className="flex justify-center flex-grow w-full bg-center bg-cover relative"
         style={{
-          backgroundImage: `url(${cityImgUrl.src})`
+          backgroundImage: `url(${cityImgUrl.src})`,
         }}
       >
         <div
@@ -31,9 +31,7 @@ export const AboutPage = () => {
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.8, ease: 'easeIn' }}
           >
-            <Heading className="">
-              {t('about.header.title')}
-            </Heading>
+            <Heading className="">{t('about.header.title')}</Heading>
             <Underline />
           </motion.div>
         </div>
@@ -45,7 +43,7 @@ export const AboutPage = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeIn' }}
           >
-            <Image className='mx-auto' src={logoFullUrl} alt='chaufftec logo' />
+            <Image className="mx-auto" src={logoFullUrl} alt="chaufftec logo" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -56,58 +54,63 @@ export const AboutPage = () => {
               {t('about.header.description')}
             </Paragraph>
           </motion.div>
-          <div className='md:grid md:grid-cols-3 flex-grow flex flex-col gap-8 pt-12'>
+          <div className="md:grid md:grid-cols-3 flex-grow flex flex-col gap-8 pt-12">
             <div
-              className='flex p-6 gap-4 border-2 border-dashed rounded-xl'
+              className="flex p-6 gap-4 border-2 border-dashed rounded-xl"
               style={{
                 borderColor: '#2B84CF',
                 backgroundColor: '#2B84CF10',
               }}
             >
               {/* @ts-ignore */}
-              <Icon name="map-pin" style={{ color: '#2B84CF', width: '28px', height: '28px' }} />
-              <div className='flex flex-col gap-2'>
-                <Paragraph bold>
-                  {t('about.section.1.label')}
-                </Paragraph>
+              <Icon
+                name="map-pin"
+                style={{ color: '#2B84CF', width: '28px', height: '28px' }}
+              />
+              <div className="flex flex-col gap-2">
+                <Paragraph bold>{t('about.section.1.label')}</Paragraph>
                 <Paragraph>
-                  Rue example 123, 1000 Bruxelles<br />
+                  Rue example 123, 1000 Bruxelles
+                  <br />
                   Belgium
                 </Paragraph>
               </div>
             </div>
             <div
-              className='flex p-6 gap-4 border-2 border-dashed rounded-xl'
+              className="flex p-6 gap-4 border-2 border-dashed rounded-xl"
               style={{
                 borderColor: '#2B84CF',
                 backgroundColor: '#2B84CF10',
               }}
             >
               {/* @ts-ignore */}
-              <Icon name="phone" style={{ color: '#2B84CF', width: '28px', height: '28px' }} />
-              <div className='flex flex-col gap-2'>
-                <Paragraph bold>
-                  {t('about.section.2.label')}
-                </Paragraph>
+              <Icon
+                name="phone"
+                style={{ color: '#2B84CF', width: '28px', height: '28px' }}
+              />
+              <div className="flex flex-col gap-2">
+                <Paragraph bold>{t('about.section.2.label')}</Paragraph>
                 <Paragraph>
-                  <a href="tel:+32484745736">+32 (0)484 74 57 36</a><br />
+                  <a href="tel:+32484745736">+32 (0)484 74 57 36</a>
+                  <br />
                   <a href="tel:+32483690256">+32 (0)483 69 02 56</a>
                 </Paragraph>
               </div>
             </div>
             <div
-              className='flex p-6 gap-4 border-2 border-dashed rounded-xl'
+              className="flex p-6 gap-4 border-2 border-dashed rounded-xl"
               style={{
                 borderColor: '#2B84CF',
                 backgroundColor: '#2B84CF10',
               }}
             >
               {/* @ts-ignore */}
-              <Icon name="letter" style={{ color: '#2B84CF', width: '28px', height: '28px' }} />
-              <div className='flex flex-col gap-2'>
-                <Paragraph bold>
-                  {t('about.section.3.label')}
-                </Paragraph>
+              <Icon
+                name="letter"
+                style={{ color: '#2B84CF', width: '28px', height: '28px' }}
+              />
+              <div className="flex flex-col gap-2">
+                <Paragraph bold>{t('about.section.3.label')}</Paragraph>
                 <Paragraph>
                   <a href="mailto:chaufftec@icloud.com">chaufftec@icloud.com</a>
                 </Paragraph>
@@ -116,6 +119,8 @@ export const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      <CallNowButton />
     </>
   )
 }

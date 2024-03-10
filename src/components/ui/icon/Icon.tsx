@@ -16,30 +16,40 @@ import {
 
 type IconProps = {
   name:
-  | 'droplet'
-  | 'filter'
-  | 'home'
-  | 'letter'
-  | 'map-pin'
-  | 'menu'
-  | 'phone'
-  | 'sun'
-  | 'thermometer'
-  | 'x'
+    | 'droplet'
+    | 'filter'
+    | 'home'
+    | 'letter'
+    | 'map-pin'
+    | 'menu'
+    | 'phone'
+    | 'sun'
+    | 'thermometer'
+    | 'x'
 }
 
 export const Icon = ({ name, ...props }: IconProps) => {
   switch (name) {
-    case 'droplet': return <FiDroplet {...props} />
-    case 'filter': return <FiFilter {...props} />
-    case 'home': return <FiHome {...props} />
-    case 'letter': return <FiMail {...props} />
-    case 'map-pin': return <FiMapPin {...props} />
-    case 'menu': return <FiMenu {...props} />
-    case 'phone': return <FiPhone {...props} />
-    case 'sun': return <FiSun {...props} />
-    case 'thermometer': return <FiThermometer {...props} />
-    case 'x': return <FiX {...props} />
+    case 'droplet':
+      return <FiDroplet {...props} />
+    case 'filter':
+      return <FiFilter {...props} />
+    case 'home':
+      return <FiHome {...props} />
+    case 'letter':
+      return <FiMail {...props} />
+    case 'map-pin':
+      return <FiMapPin {...props} />
+    case 'menu':
+      return <FiMenu {...props} />
+    case 'phone':
+      return <FiPhone {...props} />
+    case 'sun':
+      return <FiSun {...props} />
+    case 'thermometer':
+      return <FiThermometer {...props} />
+    case 'x':
+      return <FiX {...props} />
     default:
       null
   }
