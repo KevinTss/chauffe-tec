@@ -41,7 +41,7 @@ export const IndexPage = () => {
   return (
     <>
       <section className="flex justify-center flex-grow w-full overflow-hidden">
-        <div className="flex lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-36 pb-16">
+        <div className="flex lg:grid lg:grid-cols-2 flex-grow p-8 max-w-screen-xl pt-24 lg:pt-36 pb-10 lg:pb-16">
           <div className="flex flex-col items-start gap-8">
             <Heading className="text-slate-800 highlight" underline>
               {t('index.header.title')}
@@ -66,7 +66,7 @@ export const IndexPage = () => {
         </div>
       </section>
 
-      <section className="flex justify-center flex-grow w-full">
+      <section className="hidden lg:flex justify-center flex-grow w-full">
         <div className="flex flex-wrap justify-center max-w-screen-xl gap-8 py-16 pr-8">
           <Image
             width={100}

@@ -10,8 +10,8 @@ type HeadingProps = {
 }
 
 const font: Record<NonNullable<HeadingProps['level']>, string> = {
-  1: 'text-6xl',
-  2: 'text-4xl',
+  1: 'text-4xl lg:text-6xl',
+  2: 'text-3xl lg:text-4xl',
   3: 'text-m',
 }
 const mb: Record<NonNullable<HeadingProps['level']>, string> = {
