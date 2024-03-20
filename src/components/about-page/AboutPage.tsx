@@ -70,7 +70,7 @@ export const AboutPage = () => {
               <div className="flex flex-col gap-2">
                 <Paragraph bold>{t('about.section.1.label')}</Paragraph>
                 <Paragraph>
-                  Rue example 123, 1000 Bruxelles
+                  Rue Charles Meert 27, 1030 Bruxelles
                   <br />
                   Belgium
                 </Paragraph>
@@ -91,9 +91,17 @@ export const AboutPage = () => {
               <div className="flex flex-col gap-2">
                 <Paragraph bold>{t('about.section.2.label')}</Paragraph>
                 <Paragraph>
-                  <a href="tel:+32484745736">+32 (0)484 74 57 36</a>
+                  <div className='flex flex-wrap items-center gap-2'>
+                    <Icon name='whatsapp' color='#25D366' />
+                    <span>Christian</span>
+                    <a href="tel:+32483690256">+32 (0)483 69 02 56</a>
+                  </div>
                   <br />
-                  <a href="tel:+32483690256">+32 (0)483 69 02 56</a>
+                  <div className='flex flex-wrap items-center gap-2'>
+                    <Icon name='whatsapp' color='#25D366' />
+                    <span>Jérôme</span>
+                    <a href="tel:+32484745736">+32 (0)484 74 57 36</a>
+                  </div>
                 </Paragraph>
               </div>
             </div>

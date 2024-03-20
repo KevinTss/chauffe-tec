@@ -21,13 +21,13 @@ export const CallNowButton = () => {
         )}
         content={(
           <div className='flex flex-col gap-4' style={{ width: '80vw' }}>
-            <a className="flex gap-4 justify-center items-center text-xs py-2" href="tel:+32484745736">
-              <Icon name="phone" />
-              Christian - +32 (0)484 74 57 36
+            <a className="flex gap-4 justify-center items-center text-xs py-2" href="https://wa.me/0032483690256">
+              <Icon name="whatsapp" color='#25D366' />
+              Christian - +32 (0)483 69 02 56
             </a>
-            <a className="flex gap-4 justify-center items-center text-xs py-2" href="tel:+32483690256">
-              <Icon name="phone" />
-              Jéroôme - +32 (0)483 69 02 56
+            <a className="flex gap-4 justify-center items-center text-xs py-2" href="https://wa.me/0032484745736">
+              <Icon name="whatsapp" color='#25D366' />
+              Jérôme - +32 (0)484 74 57 36
             </a>
           </div>
         )}

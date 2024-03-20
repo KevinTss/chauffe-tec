@@ -2,7 +2,7 @@ import { Pathnames, Locale, Dictionary } from '@types'
 import { en, fr } from '@constants'
 
 export const i18n = {
-  defaultLocale: 'en',
+  defaultLocale: 'fr',
   locales: ['fr', 'en'],
 } as const
 

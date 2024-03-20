@@ -17,7 +17,9 @@ export const getLocale = (request: NextRequest): string | undefined => {
     locales,
   )
 
-  const locale = matchLocale(languages, locales, i18n.defaultLocale)
+  // This function doesn't seems to return the default language
+  // const locale = matchLocale(languages, locales, i18n.defaultLocale)
+  const locale = 'fr'
 
   return locale
 }

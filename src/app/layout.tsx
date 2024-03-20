@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google'
 import '@styles/globals.css'
 import { AppParams, Locale } from '@types'
 import { i18n } from '@constants'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const font = Montserrat({ subsets: ['latin'] })
 
@@ -23,11 +24,12 @@ export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
-  const locale: Locale = params?.locale || 'fr'
+  const locale: Locale = params?.locale || i18n.defaultLocale
 
   return (
     <html lang={locale}>
       <body className={`${font.className} `}>{children}</body>
+      <GoogleTagManager gtmId="GTM-TJKWVCJN" />
     </html>
   )
 }

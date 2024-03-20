@@ -36,7 +36,7 @@ const PriceColumn = ({ col, onBook }: { col: number, onBook: VoidFunction }) => 
   const t = useTranslate()
   return (
     <div
-      className="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow  xl:p-8 "
+      className="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow  xl:p-8"
       style={{ minWidth: '285px' }}
     >
       <Heading className="text-slate-800 text-center" level={3}>
@@ -48,10 +48,11 @@ const PriceColumn = ({ col, onBook }: { col: number, onBook: VoidFunction }) => 
       <div className="flex items-baseline justify-center my-8">
         <span className="mr-2 text-3xl font-extrabold">
           {t(`index.pricing.${col}.price` as DictionaryKeys)}
+          <i className='text-slate-600 font-normal text-xs pl-1'>(HTVA)</i>
         </span>
       </div>
       <ul role="list" className="mb-8 space-y-4 text-left grow">
-        {[1, 2, 3, 4, 5, 6].map(nb => (
+        {[1, 2, 3, 4, 5].map(nb => (
           <ListItem key={nb} col={col} item={nb} />
         ))}
       </ul>
@@ -62,7 +63,7 @@ const PriceColumn = ({ col, onBook }: { col: number, onBook: VoidFunction }) => 
           backgroundColor: 'var(--color-primary)',
         }}
       >
-        Book
+        {t(`index.pricing.cta`)}
       </button>
     </div>
   )
@@ -91,8 +92,7 @@ const ListItem = ({ col, item }: { col: number; item: number }) => {
   )
 }
 
-const CALENDLY_LINK =
-  'https://calendly.com/kevin-tassi/dogfood-cycle-onboarding'
+const CALENDLY_LINK = 'https://calendly.com/chaufftec/depannage-1'
 const CALENDLY_RULES = '?hide_event_type_details=1&hide_gdpr_banner=1'
 
 type CalendlyModalProps = {
